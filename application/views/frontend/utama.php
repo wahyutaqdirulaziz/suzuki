@@ -13,42 +13,31 @@
 </head>
 
 <body>
-
-
     <nav class="navbar navbar-expand-lg navbar-dark site-header sticky-top py-1 ">
         <div class="">
             <img src="assets/img/suzu.png" width="30" height="30" alt="">
-
             <a class="navbar-brand " href="#"><b>NJS</b></a>
-
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="container">
-
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav mr-auto">
-
                     <a class="nav-item nav-link " href="#">Model A<span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link " href="#">Model B</a>
                     <a class="nav-item nav-link " href="#">Model C</a>
                     <a class="nav-item nav-link" href="#">Model D</a>
                     <a class="nav-item nav-link " href="#">Model F</a>
-
                     <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">Features</a>
-
                 </div>
                 <div class="navbar-nav">
                     <a class="nav-item nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-item nav-link" href="#">Features</a>
                 </div>
-
             </div>
-
         </div>
-
     </nav>
 
 <!---crousel-->
