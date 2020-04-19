@@ -1,0 +1,126 @@
+html *
+{
+   /* font-size: ; */
+   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+   
+}
+.text-menu{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #dedede;
+  /* font-size: 15px; */
+  font-weight: 400;
+}
+@media (min-width : 901px){
+  .text-menu{
+    font-size: 15px;
+  }
+}
+@media (max-width : 900px){
+  .text-menu{
+    font-size: 12px;
+  }
+}
+.text-menu:hover{
+  color: white;
+  text-shadow: 2px white;
+}
+.section-1{
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    
+}
+.section-2{
+    width: 100%;
+    background-image: url(../images/main_hero_homepage_desktop.jpg);
+}
+
+.section-3{
+    width: 100%;
+    background-color: rgb(109, 109, 109);
+    background-image: url(../images/homepage-solar@2x.jpg);
+}
+
+.section-4{
+    width: 100%;
+    background-color: rgb(168, 168, 168);
+    background-image: url(../images/blue-hero-desktop.jpg);
+    
+}
+
+.btn-top-section{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 100;
+    display: none;
+}
+.btn-next-section{
+    position: absolute;
+    z-index: 100;
+}
+.bg-image-auto-center{
+    background-repeat: no-repeat;
+    background-position: center;  
+    background-size: cover;
+}
+.hero-region-wraper{
+    padding: 150px 0 50px 0;
+    width: 100%;
+    background: linear-gradient(#343a40, #343a4000);
+}
+.hero-region-content{  
+    width: 100%;
+    
+}
+.main-btn{
+    width: 250px;
+    border-radius: 50px;
+    /* box-shadow: rgba(0, 0, 0, 0.356) 3px 3px 5px;; */
+}
+.hero-region-arrow{
+    width: 100%;
+
+}
+@media (min-width: 701px) {
+  .carousel-l{
+    background-image: url(../images/main_hero_homepage_desktop.jpg);
+    background-position:center left;
+    background-size: 210%;
+    background-repeat: no-repeat;
+  }
+  .carousel-2{
+    background-image: url(../images/main_hero_homepage_desktop.jpg);
+    background-position:center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  .carousel-3{
+    background-image: url(../images/main_hero_homepage_desktop.jpg);
+    background-position: center right;
+    background-size: 210%;
+    background-repeat: no-repeat;
+  }
+  .arrow-down{
+    color: #acaeb2;
+  }
+}
+@media (max-width: 700px) {
+  .carousel-l{
+    background-image: url(../images/main_hero_homepage_mobile.jpg);
+    background-position:center left;
+    background-size: 210%;
+    background-repeat: no-repeat;
+  }
+  .carousel-2{
+    background-image: url(../images/main_hero_homepage_mobile.jpg);
+    background-position:center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .carousel-3{
+    background-image: url(../images/main_hero_homepage_mobile.jpg);
+    background-position: center right;
+    background-size: 210%;
+    background-repeat: no-repeat;
+  }
+}
