@@ -15,4 +15,7 @@ public function index(){
     $this->load->view('frontend/utama');
 }
 
+public function register() {
+    $this->load->view('frontend/login')
+}
 }
