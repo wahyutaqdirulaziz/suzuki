@@ -21,14 +21,12 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$data['title']='Dashboard';
-		$data['page']='admin/contents/dashboard';
-		$this->load->view('admin/base',$data);
+		$this->load->view('admin/contents/dashboard',$data);
 	}
 
 	public function admin()
 	{
 		$data['title']='admin';
-		$data['page']='admin/contents/admin';
-		$this->load->view('admin/base',$data);
+		$this->load->view('admin/contents/admin',$data);
 	}
 }
