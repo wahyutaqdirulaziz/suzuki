@@ -6,7 +6,7 @@ class Dashboard_controller extends CI_Controller {
     //$this->load->model();
   }
   public function dashboard(){
-    $data['page_name'] = 'Dashboard';
-    $this->load->view('admin/contents/dashboard', $data);
+    $data['title']='Dashboard';
+		$this->load->view('admin/contents/dashboard',$data);
   }
 }
