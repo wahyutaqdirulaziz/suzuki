@@ -16,6 +16,6 @@ public function index(){
 }
 
 public function register() {
-    $this->load->view('frontend/login')
+    $this->load->view('frontend/login');
 }
 }
