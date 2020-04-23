@@ -53,4 +53,8 @@ $route['default_controller'] = 'Home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
-$route['dashboard'] = 'admin/dashboard_controller/dashboard';
+$route['admin/dashboard'] = 'admin/dashboard_controller/dashboard';
+
+$route['admin/data/produk'] = 'admin/produk_controller/data_produk';
+$route['admin/form/tambah/produk'] = 'admin/produk_controller/form_tambah_produk';
+$route['admin/proses/tambah/produk'] = 'admin/produk_controller/proses_tambah_produk';
