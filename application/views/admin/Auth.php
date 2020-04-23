@@ -32,13 +32,21 @@
 <div class="login-box">
   <div class="login-logo">
     <a href="<?= site_url('')?>"><b>Suzuki</b>Njs</a>
+ 
   </div>
   <!-- /.login-logo -->
+  <?php if ($this->session->flashdata('message')): ?>
+											<div class="alert alert-danger" role="alert">
+												<?php echo $this->session->flashdata('message'); ?>
+											</div>
+											<?php endif; ?>
   <div class="login-box-body">
+  
     <p class="login-box-msg">Sign in to start your session</p>
     
      <?= form_open('Auth');?>
       <div class="form-group has-feedback">
+      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
         <input type="email" name="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
