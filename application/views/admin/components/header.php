@@ -224,7 +224,7 @@
                 <img src="<?= base_url('assets')?>/admin1/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                <?php echo $this->session->userdata('role')?>
                   <small>Member since Nov. 2012</small>
                 </p>
               </li>
@@ -249,7 +249,7 @@
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
                 <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  <a href="<?= site_url('Auth/logout')?>" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
