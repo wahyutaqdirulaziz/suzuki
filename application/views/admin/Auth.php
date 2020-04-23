@@ -39,6 +39,7 @@
     
      <?= form_open('Auth');?>
       <div class="form-group has-feedback">
+      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
         <input type="email" name="email" class="form-control" placeholder="Email">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
