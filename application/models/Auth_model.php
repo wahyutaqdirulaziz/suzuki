@@ -41,13 +41,15 @@ class Auth_model extends CI_Model
                     return true;
                 }
            }else{
-              
+            $this->session->set_flashdata('message', 'akun belum di activasi.');
                return false;
            }
-        }
+        }else{
         
         // login gagal
-		return false;
+        $this->session->set_flashdata('message', 'username atau password anda salah mohon di cek !');
+        return false;
+    }
     }
 
     public function isNotLogin(){
