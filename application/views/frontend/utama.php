@@ -40,7 +40,7 @@
             <a class="nav-item nav-link text-menu" href="#">KARIMUN WAGON</a>
           </div>
           <div class="navbar-nav ">
-            <a class="nav-item nav-link text-menu" href="#">SIGN IN</a>
+            <a class="nav-item nav-link text-menu" href="<?= site_url('Auth')?>">SIGN IN</a>
           </div>
         </div>
       </nav>
