@@ -54,7 +54,16 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['admin/dashboard'] = 'admin/dashboard_controller/dashboard';
-
+/*@PRODUK*/
+/*tampilkan data produk*/
 $route['admin/data/produk'] = 'admin/produk_controller/data_produk';
+/*tampilkan form tambah produk*/
 $route['admin/form/tambah/produk'] = 'admin/produk_controller/form_tambah_produk';
+/*proses data dari form tambah produk*/
 $route['admin/proses/tambah/produk'] = 'admin/produk_controller/proses_tambah_produk';
+/*tampilkan form ubah produk dan sertakan ID*/
+$route['admin/form/ubah/produk/(:any)'] = 'admin/produk_controller/form_ubah_produk/$1';
+/*proses data dari form ubah produk*/
+$route['admin/proses/ubah/produk'] = 'admin/produk_controller/proses_ubah_produk';
+/*proses hapus data produk*/
+$route['admin/proses/hapus/produk/(:any)'] = 'admin/produk_controller/proses_hapus_produk/$1';

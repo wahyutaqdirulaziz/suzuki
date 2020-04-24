@@ -33,16 +33,16 @@
                 </div>
                 <div class="form-group">
                   <label>Tag Line</label>
-                  <input type="number" name="tag_line" value="" class="form-control">
+                  <input type="text" name="tag_line" value="" class="form-control">
                 </div>
                 <div class="form-group">
                   <label>Fitur</label>
-                  <input type="number" name="tag_line" value="" class="form-control">
+                  <input type="text" name="fitur_produk" value="" class="form-control">
                 </div>
               </div>
 
               <div class="box-footer">
-                <button class="btn btn-sm btn-success pull-right"><i class="fa fa-send"></i> SIMPAN</button>
+                <button class="btn btn-sm btn-success pull-right" type="submit"><i class="fa fa-send"></i> SIMPAN</button>
               </div>
               <?php echo form_close(); ?>
             </div>

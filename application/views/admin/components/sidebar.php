@@ -186,7 +186,7 @@
             <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
           </ul> -->
     </li>
-    <li><a href="<?php echo base_url('admin/data/produk');?>"><i class="fa fa-list"></i> <span>Produk</span></a></li>
+    <li class="<?php if($request=="produk")echo 'active';?>"><a href="<?php echo base_url('admin/data/produk');?>"><i class="fa fa-list"></i> <span>Produk</span></a></li>
     <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
     <li class="header">LABELS</li>
     <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>

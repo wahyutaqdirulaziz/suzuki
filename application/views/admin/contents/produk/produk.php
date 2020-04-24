@@ -32,6 +32,7 @@
                     <th class="text-center">No</th>
                     <th class="text-center">Nama Produk</th>
                     <th class="text-center">Tag Line</th>
+                    <th class="text-center">Fitur</th>
                     <th class="text-center">Tindakan</th>
                   </tr>
                 </thead>
@@ -42,12 +43,13 @@
                       <td><?php echo $no++; ?></td>
                       <td><?php echo ucwords($prd->nama_produk); ?></td>
                       <td><?php echo ucwords($prd->tag_line); ?></td>
+                      <td><?php echo ucwords($prd->fitur_produk); ?></td>
                       <td class="text-center">
                         <div class="dropdown">
                           <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown"><span class="caret"></span></button>
-                          <ul class="dropdown-menu">
-                            <li><a href="<?php echo base_url('form/ubah/produk/' . $prd->id_produk); ?>" class="text-yellow"><i class="fa fa-edit"></i> Ubah</a></li>
-                            <li><a href="<?php echo site_url('proses/hapus/produk/' . $prd->id_produk); ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?');" class="text-red"><i class="fa fa-trash"></i> Hapus</a></li>
+                          <ul class="dropdown-menu ">
+                            <li><a href="<?php echo base_url('admin/form/ubah/produk/' . $prd->id_produk); ?>" class="text-yellow"><i class="fa fa-edit"></i> Ubah</a></li>
+                            <li><a href="<?php echo site_url('admin/proses/hapus/produk/' . $prd->id_produk); ?>" onclick="return confirm('Anda yakin ingin menghapus data ini ?');" class="text-red"><i class="fa fa-trash"></i> Hapus</a></li>
                           </ul>
                         </div>
                       </td>
@@ -56,10 +58,11 @@
                 </tbody>
                 <tfoot class="bg-light-blue">
                   <tr>
-                    <th>No</th>
-                    <th>Nama Produk</th>
-                    <th>Tag Line</th>
-                    <th>Tindakan</th>
+                    <th class="text-center">No</th>
+                    <th class="text-center">Nama Produk</th>
+                    <th class="text-center">Tag Line</th>
+                    <th class="text-center">Fitur</th>
+                    <th class="text-center">Tindakan</th>
                   </tr>
                 </tfoot>
               </table>

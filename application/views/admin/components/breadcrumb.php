@@ -1,6 +1,6 @@
 <section class="content-header">
     <h1>
-        <?php echo ucfirst($this->uri->segment(1));?> <small><?php echo ucfirst($this->uri->segment(2));?></small>
+        <?php echo ucfirst($this->uri->segment(2));?> <small><?php echo ucfirst($this->uri->segment(3));?></small>
     </h1>
     <ol class="breadcrumb">
         <?php 
