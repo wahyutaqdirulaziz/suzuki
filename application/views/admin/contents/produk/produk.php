@@ -20,7 +20,6 @@
         <?php $this->load->view('admin/components/alert'); ?>
         <div class="box box-success with-border">
           <div class="box-header">
-            <h3 class="box-title pull-left">Data Produk</h3>
             <a href="<?php echo base_url('admin/form/tambah/produk'); ?>" class="btn btn-sm btn-success pull-right">Tambah Produk&nbsp;&nbsp;&nbsp;<i class="fa fa-plus"></i></a>
           </div>
           <div class="box-body">

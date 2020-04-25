@@ -13,7 +13,7 @@ class User_model extends CI_Model {
   //public $datetime = date("Y-m-d H:i:s");
 
   private function upload_image(){
-    $imgDir = './img/users/';
+    $imgDir = './img/user/';
     $config['upload_path'] = $imgDir;
     $config['encrypt_name'] = TRUE;
     $config['file_name'] = date('Ymdhis') . $_FILES['user_images']['name'];
