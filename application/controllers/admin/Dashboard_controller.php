@@ -9,6 +9,7 @@ class Dashboard_controller extends CI_Controller {
   }
   public function dashboard(){
     $data['title']='Dashboard';
+    $data['request'] = 'dashboard';
 		$this->load->view('admin/contents/dashboard',$data);
   }
 }
