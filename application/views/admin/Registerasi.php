@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Suzuki | Log in</title>
+  <title>Suzuki | registrasi</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -42,29 +42,43 @@
 											<?php endif; ?>
   <div class="login-box-body">
   
-    <p class="login-box-msg">Sign in to start your session</p>
+    <p class="login-box-msg">Registerasi</p>
     
-     <?= form_open('Auth');?>
+    <form action="<?php echo site_url('Register/add') ?>" method="post" enctype="multipart/form-data" >
+     <div class="form-group has-feedback">
+     <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
+   
+        <input type="text" name="nama" class="form-control" placeholder="Full name" required value="<?= $this->input->post('nama')?>">
+        <span class="glyphicon glyphicon-user form-control-feedback"><?php echo form_error('nama') ?></span>
+        </div>
+    <div class="form-group has-feedback">
+        <input type="email" name="email" class="form-control" placeholder="Email" required value="<?= $this->input->post('email')?>">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('email') ?></span>
+      </div>
+
       <div class="form-group has-feedback">
-      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
-        <input type="email" name="email" class="form-control" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        <input type="number" name="nomer" class="form-control" placeholder="No handphone" required value="<?= $this->input->post('nomer')?>">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('nomer') ?></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="password" class="form-control" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+        <span class="glyphicon glyphicon-lock form-control-feedback"><?php echo form_error('password') ?></span>
+      </div>
+      <div class="form-group has-feedback">
+        <input type="password" name="confirmasi" class="form-control" placeholder="Retype password" required="">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"><?php echo form_error('confirmasi') ?></span>
       </div>
       <div class="row">
-        <div class="col-xs-8">
+        <!-- <div class="col-xs-8">
           <div class="checkbox icheck">
             <label>
-              <input type="checkbox"> Remember Me
+              <input type="checkbox"> I agree to the <a href="#">terms</a>
             </label>
           </div>
-        </div>
+        </div> -->
         <!-- /.col -->
         <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+          <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
         </div>
         <!-- /.col -->
       </div>
@@ -79,8 +93,8 @@
     </div> -->
     <!-- /.social-auth-links -->
 
-    <a href="#">I forgot my password</a><br>
-    <a href="<?= site_url('Register')?>" class="text-center">Register a new membership</a>
+    <!-- <a href="#">I forgot my password</a><br>
+    <a href="register.html" class="text-center">Register a new membership</a> -->
 
   </div>
   <!-- /.login-box-body -->
