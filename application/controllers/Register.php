@@ -26,7 +26,7 @@ class Register extends CI_Controller
         // }else {
         //     # code...
             $this->load->view("admin/registerasi");
-        }
+        
 
        
     }
