@@ -11,6 +11,31 @@ class User_model extends CI_Model {
   public $is_active;
   public $role_id;
   //public $datetime = date("Y-m-d H:i:s");
+  public function rules()
+  {
+      return [
+          ['field' => 'nama',
+          'label' => 'Nama',
+          'rules' => 'required'],
+
+          ['field' => 'email',
+          'label' => 'Email',
+          'rules' => 'required|valid_email|is_unique[user.email]'],
+
+          ['field' => 'nomer',
+          'label' => 'Nomer',
+          'rules' => 'required'],
+          
+          ['field' => 'password',
+          'label' => 'Password',
+          'rules' => 'required|min_length[6]|max_length[15]'],
+
+          ['field' => 'confirmasi',
+          'label' => 'Password',
+          'rules' => 'required|matches[password]']
+      ];
+  }
+
 
   private function upload_image(){
     $imgDir = './img/user/';

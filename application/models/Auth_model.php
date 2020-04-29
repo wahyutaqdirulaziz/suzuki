@@ -2,8 +2,7 @@
 
 class Auth_model extends CI_Model
 {
-    // private $_table = "users";
-
+       
     public function doLogin(){
 		$post = $this->input->post();
 
@@ -56,9 +55,6 @@ class Auth_model extends CI_Model
         return $this->session->userdata('user_logged') === null;
     }
 
-    private function _updateLastLogin($user_id){
-        $sql = "UPDATE {$this->_table} SET last_login=now() WHERE user_id={$user_id}";
-        $this->db->query($sql);
-    }
+  
 
 }
