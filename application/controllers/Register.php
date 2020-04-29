@@ -15,20 +15,29 @@ class Register extends CI_Controller
 
     public function index()
     {
-        // $user = $this->User_model;
-        // $validation = $this->form_validation;
-        // $validation->set_rules($user->rules());
+   
+            $this->load->view("admin/registerasi");    
+    }
 
-        // if ($validation->run()) {
-        //     $user->add_user();
-        //     $this->session->set_flashdata('message', 'registrasi anda berhasil');
-        //     redirect('Auth');
-        // }else {
-        //     # code...
-            $this->load->view("admin/registerasi");
-        
-
-       
+    public function proses_registrasi()
+    {
+        $this->form_validation->set_rules('nama','Nama','required');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|is_unique[users.email]',[
+            'valid_email' => 'masukan email yang valid'
+        ]);
+        $this->form_validation->set_rules('no_hp','No_hp','required',[
+            'required' => 'no nama anda'
+        ]);
+        $this->form_validation->set_rules('password', 'Password', 'required|matches[passconf]');
+        $this->form_validation->set_rules('passconf', 'Password Confirmation', 'required');
+        if($this->form_validation->run() == FALSE){
+           
+            redirect('Register');
+         } else {
+        $this->User_model->add_user();
+            $this->session->set_flashdata('message', 'Registrasi berhasil silahkan Login');
+            redirect('Auth');
+      }
     }
 
   

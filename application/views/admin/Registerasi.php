@@ -35,38 +35,41 @@
  
   </div>
   <!-- /.login-logo -->
-  <?php if ($this->session->flashdata('message')): ?>
+ 
+  <?php if ($this->session->flashdata('danger')): ?>
 											<div class="alert alert-danger" role="alert">
-												<?php echo $this->session->flashdata('message'); ?>
+                      <?php echo $this->session->flashdata('danger'); ?>
 											</div>
 											<?php endif; ?>
   <div class="login-box-body">
   
     <p class="login-box-msg">Registerasi</p>
-    
-    <form action="<?php echo site_url('Register/add') ?>" method="post" enctype="multipart/form-data" >
+    <?php echo validation_errors(); ?>
+    <form action="<?php echo site_url('Register/proses_registrasi') ?>" method="post" enctype="multipart/form-data" >
      <div class="form-group has-feedback">
      <input type="hidden" name="<?php echo $this->security->get_csrf_token_name(); ?>" value="<?php echo $this->security->get_csrf_hash(); ?>">
    
-        <input type="text" name="nama" class="form-control" placeholder="Full name" required value="<?= $this->input->post('nama')?>">
+        <input type="text" name="nama" class="form-control" placeholder="Full name"  value="<?= set_value('nama') ?>">
         <span class="glyphicon glyphicon-user form-control-feedback"><?php echo form_error('nama') ?></span>
         </div>
     <div class="form-group has-feedback">
-        <input type="email" name="email" class="form-control" placeholder="Email" required value="<?= $this->input->post('email')?>">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('email') ?></span>
+        <input type="email" name="email" class="form-control" placeholder="Email"  value="<?= set_value('email') ?>">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('email_valid') ?></span>
       </div>
 
       <div class="form-group has-feedback">
-        <input type="number" name="nomer" class="form-control" placeholder="No handphone" required value="<?= $this->input->post('nomer')?>">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('nomer') ?></span>
+        <input type="number" name="no_hp" class="form-control" placeholder="No handphone"  value="<?= set_value('no_hp') ?>">
+        <span class="glyphicon glyphicon-envelope form-control-feedback"><?php echo form_error('no_hp') ?></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="password" class="form-control" placeholder="Password" required="">
+        <input type="password" name="password" class="form-control" placeholder="Password" >
         <span class="glyphicon glyphicon-lock form-control-feedback"><?php echo form_error('password') ?></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" name="confirmasi" class="form-control" placeholder="Retype password" required="">
-        <span class="glyphicon glyphicon-log-in form-control-feedback"><?php echo form_error('confirmasi') ?></span>
+      <input type="hidden" name="role_id" class="form-control" value="2" >
+      
+        <input type="password" name="passconf" class="form-control" placeholder="Retype password" required="">
+        <span class="glyphicon glyphicon-log-in form-control-feedback"><?php echo form_error('passconf') ?></span>
       </div>
       <div class="row">
         <!-- <div class="col-xs-8">
