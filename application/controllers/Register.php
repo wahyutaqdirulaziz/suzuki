@@ -1,6 +1,6 @@
 <?php
 
-// defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Register extends CI_Controller
 {
@@ -9,16 +9,11 @@ class Register extends CI_Controller
         parent::__construct();
         $this->load->model('User_model');
         $this->load->library('form_validation');
-
     }
-
-
     public function index()
     {
-   
             $this->load->view("admin/registerasi");    
     }
-
     public function proses_registrasi()
     {
         $this->form_validation->set_rules('nama','Nama','required');
